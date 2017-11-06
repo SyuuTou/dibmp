@@ -71,10 +71,10 @@ public class TestFinancialService extends TestCase {
 			StorageRecord sr =new StorageRecord();
 			//sa.setSrid((long)i);
 			sr.setSaid((long)i);
-			sr.setGid((long)i);
+			sr.setGid((long)1);
 			sr.setName("name"+i);
 			sr.setNum(i);
-			sr.setPrice((double)i);
+			sr.setPrice((double)1);
 			sr.setWeight((double)i);
 			sr.setStatus(i);
 			sr.setInmid("inmid"+i);
