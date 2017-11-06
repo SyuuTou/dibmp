@@ -1,0 +1,475 @@
+2017-11-06 15:46:08,123 INFO [com.alibaba.dubbo.common.logger.LoggerFactory] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2017-11-06 15:46:08,242 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:12,630 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] The service ready on spring started. service: cn.mldn.dibmp.service.IFinancialService, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:12,799 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to local registry, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:12,800 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=6072&revision=dev&side=provider&timestamp=1509954372653&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:12,800 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Register dubbo service cn.mldn.dibmp.service.IFinancialService url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=6072&revision=dev&side=provider&timestamp=1509954372653&version=dev to registry registry://192.168.28.85:2182/com.alibaba.dubbo.registry.RegistryService?application=mldn-service-member&dubbo=2.5.6&pid=6072&registry=zookeeper&timestamp=1509954372642, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:13,028 INFO [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] Start NettyServer bind /0.0.0.0:9326, export /192.168.29.1:9326, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:13,054 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Load registry store file C:\Users\syuutou\.dubbo\dubbo-registry-192.168.28.85.cache, data: {cn.mldn.dibmp.service.IMemberService:dev=empty://192.168.29.1/cn.mldn.dibmp.service.IMemberService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=3896&revision=0.0.1&side=consumer&timestamp=1509953884224&version=dev empty://192.168.29.1/cn.mldn.dibmp.service.IMemberService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=3896&revision=0.0.1&side=consumer&timestamp=1509953884224&version=dev dubbo://192.168.29.1:9327/cn.mldn.dibmp.service.IMemberService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=4148&revision=dev&side=provider&timestamp=1509952410384&version=dev, cn.mldn.mldndubbo.service.IMessageService:dev=empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev dubbo://192.168.29.1:9327/cn.mldn.mldndubbo.service.IMessageService?anyhost=true&application=mldn-service&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=4112&revision=dev&side=provider&timestamp=1509808870612&version=dev, cn.mldn.dibmp.service.IFinancialService:dev=empty://192.168.29.1/cn.mldn.dibmp.service.IFinancialService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=9016&revision=dev&side=consumer&timestamp=1509901766421&version=dev empty://192.168.29.1/cn.mldn.dibmp.service.IFinancialService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=9016&revision=dev&side=consumer&timestamp=1509901766421&version=dev dubbo://192.168.29.1:9327/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4908&revision=dev&side=provider&timestamp=1509901247355&version=dev}, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:13,155 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Register: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=6072&revision=dev&side=provider&timestamp=1509954372653&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:13,292 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Subscribe: provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=6072&revision=dev&side=provider&timestamp=1509954372653&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:13,392 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Notify urls for subscribe url provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=6072&revision=dev&side=provider&timestamp=1509954372653&version=dev, urls: [empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=6072&revision=dev&side=provider&timestamp=1509954372653&version=dev], dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:46:13,463 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Dubbo SpringContainer started!, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:46,159 INFO [com.alibaba.dubbo.common.logger.LoggerFactory] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2017-11-06 15:48:46,270 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:50,960 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] The service ready on spring started. service: cn.mldn.dibmp.service.IFinancialService, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:51,188 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to local registry, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:51,189 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4492&revision=dev&side=provider&timestamp=1509954530992&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:51,189 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Register dubbo service cn.mldn.dibmp.service.IFinancialService url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4492&revision=dev&side=provider&timestamp=1509954530992&version=dev to registry registry://192.168.28.85:2182/com.alibaba.dubbo.registry.RegistryService?application=mldn-service-member&dubbo=2.5.6&pid=4492&registry=zookeeper&timestamp=1509954530978, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:51,460 ERROR [com.alibaba.dubbo.container.Main] -  [DUBBO] Fail to start server(url: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&channel.readonly.sent=true&codec=dubbo&default.timeout=10000000&dubbo=2.5.6&generic=false&heartbeat=60000&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4492&revision=dev&side=provider&timestamp=1509954530992&version=dev) Failed to bind NettyServer on /192.168.29.1:9326, cause: Failed to bind to: /0.0.0.0:9326, dubbo version: 2.5.6, current host: 127.0.0.1
+com.alibaba.dubbo.rpc.RpcException: Fail to start server(url: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&channel.readonly.sent=true&codec=dubbo&default.timeout=10000000&dubbo=2.5.6&generic=false&heartbeat=60000&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4492&revision=dev&side=provider&timestamp=1509954530992&version=dev) Failed to bind NettyServer on /192.168.29.1:9326, cause: Failed to bind to: /0.0.0.0:9326
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:279)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.openServer(DubboProtocol.java:256)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.export(DubboProtocol.java:243)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:94)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:56)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doLocalExport(RegistryProtocol.java:163)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:116)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:92)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:54)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.export(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:550)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:346)
+	at com.alibaba.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:307)
+	at com.alibaba.dubbo.config.ServiceConfig.export(ServiceConfig.java:206)
+	at com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:109)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:399)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:353)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:887)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:95)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:46)
+	at com.alibaba.dubbo.container.Main.main(Main.java:86)
+	at cn.mldn.dibmp.service.main.ProviderStartupFinancialService.main(ProviderStartupFinancialService.java:7)
+Caused by: com.alibaba.dubbo.remoting.RemotingException: Failed to bind NettyServer on /192.168.29.1:9326, cause: Failed to bind to: /0.0.0.0:9326
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:67)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.<init>(NettyServer.java:63)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyTransporter.bind(NettyTransporter.java:33)
+	at com.alibaba.dubbo.remoting.Transporter$Adaptive.bind(Transporter$Adaptive.java)
+	at com.alibaba.dubbo.remoting.Transporters.bind(Transporters.java:57)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchanger.bind(HeaderExchanger.java:41)
+	at com.alibaba.dubbo.remoting.exchange.Exchangers.bind(Exchangers.java:71)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:277)
+	... 27 more
+Caused by: org.jboss.netty.channel.ChannelException: Failed to bind to: /0.0.0.0:9326
+	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:303)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.doOpen(NettyServer.java:94)
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:62)
+	... 34 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.bind(NioServerSocketPipelineSink.java:148)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.handleServerSocket(NioServerSocketPipelineSink.java:100)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:74)
+	at org.jboss.netty.channel.Channels.bind(Channels.java:468)
+	at org.jboss.netty.channel.AbstractChannel.bind(AbstractChannel.java:192)
+	at org.jboss.netty.bootstrap.ServerBootstrap$Binder.channelOpen(ServerBootstrap.java:348)
+	at org.jboss.netty.channel.Channels.fireChannelOpen(Channels.java:176)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketChannel.<init>(NioServerSocketChannel.java:85)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory.newChannel(NioServerSocketChannelFactory.java:142)
+	at org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory.newChannel(NioServerSocketChannelFactory.java:90)
+	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:282)
+	... 36 more
+2017-11-06 15:48:51,467 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Run shutdown hook now., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:51,468 INFO [com.alibaba.dubbo.registry.support.AbstractRegistryFactory] -  [DUBBO] Close all registries [], dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:51,469 INFO [com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol] -  [DUBBO] Unexport service: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4492&revision=dev&side=provider&timestamp=1509954530992&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:48:51,469 INFO [com.alibaba.dubbo.rpc.protocol.injvm.InjvmProtocol] -  [DUBBO] Unexport service: injvm://127.0.0.1/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4492&revision=dev&side=provider&timestamp=1509954530992&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:09,484 INFO [com.alibaba.dubbo.common.logger.LoggerFactory] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2017-11-06 15:49:09,612 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:13,908 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] The service ready on spring started. service: cn.mldn.dibmp.service.IFinancialService, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,076 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to local registry, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,076 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=7028&revision=dev&side=provider&timestamp=1509954553928&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,076 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Register dubbo service cn.mldn.dibmp.service.IFinancialService url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=7028&revision=dev&side=provider&timestamp=1509954553928&version=dev to registry registry://192.168.28.85:2182/com.alibaba.dubbo.registry.RegistryService?application=mldn-service-member&dubbo=2.5.6&pid=7028&registry=zookeeper&timestamp=1509954553920, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,356 INFO [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] Start NettyServer bind /0.0.0.0:9326, export /192.168.29.1:9326, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,386 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Load registry store file C:\Users\syuutou\.dubbo\dubbo-registry-192.168.28.85.cache, data: {cn.mldn.dibmp.service.IMemberService:dev=empty://192.168.29.1:9327/cn.mldn.dibmp.service.IMemberService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=3284&revision=dev&side=provider&timestamp=1509954383331&version=dev, cn.mldn.mldndubbo.service.IMessageService:dev=empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev dubbo://192.168.29.1:9327/cn.mldn.mldndubbo.service.IMessageService?anyhost=true&application=mldn-service&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=4112&revision=dev&side=provider&timestamp=1509808870612&version=dev, cn.mldn.dibmp.service.IFinancialService:dev=empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=6072&revision=dev&side=provider&timestamp=1509954372653&version=dev}, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,577 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Register: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=7028&revision=dev&side=provider&timestamp=1509954553928&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,745 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Subscribe: provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=7028&revision=dev&side=provider&timestamp=1509954553928&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,857 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Notify urls for subscribe url provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=7028&revision=dev&side=provider&timestamp=1509954553928&version=dev, urls: [empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=7028&revision=dev&side=provider&timestamp=1509954553928&version=dev], dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 15:49:14,920 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Dubbo SpringContainer started!, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:21,635 INFO [com.alibaba.dubbo.common.logger.LoggerFactory] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2017-11-06 16:00:21,746 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:26,588 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] The service ready on spring started. service: cn.mldn.dibmp.service.IFinancialService, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:26,773 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to local registry, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:26,774 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4664&revision=dev&side=provider&timestamp=1509955226610&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:26,774 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Register dubbo service cn.mldn.dibmp.service.IFinancialService url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4664&revision=dev&side=provider&timestamp=1509955226610&version=dev to registry registry://192.168.28.85:2182/com.alibaba.dubbo.registry.RegistryService?application=mldn-service-member&dubbo=2.5.6&pid=4664&registry=zookeeper&timestamp=1509955226601, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:27,122 INFO [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] Start NettyServer bind /0.0.0.0:9326, export /192.168.29.1:9326, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:27,155 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Load registry store file C:\Users\syuutou\.dubbo\dubbo-registry-192.168.28.85.cache, data: {cn.mldn.dibmp.service.IMemberService:dev=empty://192.168.29.1:9327/cn.mldn.dibmp.service.IMemberService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=2560&revision=dev&side=provider&timestamp=1509955214652&version=dev, cn.mldn.mldndubbo.service.IMessageService:dev=empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev dubbo://192.168.29.1:9327/cn.mldn.mldndubbo.service.IMessageService?anyhost=true&application=mldn-service&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=4112&revision=dev&side=provider&timestamp=1509808870612&version=dev, cn.mldn.dibmp.service.IFinancialService:dev=empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=7028&revision=dev&side=provider&timestamp=1509954553928&version=dev}, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:27,318 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Register: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4664&revision=dev&side=provider&timestamp=1509955226610&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:27,470 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Subscribe: provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4664&revision=dev&side=provider&timestamp=1509955226610&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:27,588 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Notify urls for subscribe url provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4664&revision=dev&side=provider&timestamp=1509955226610&version=dev, urls: [empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4664&revision=dev&side=provider&timestamp=1509955226610&version=dev], dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:00:27,633 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Dubbo SpringContainer started!, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:16,865 INFO [com.alibaba.dubbo.common.logger.LoggerFactory] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2017-11-06 16:22:17,021 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:22,155 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] The service ready on spring started. service: cn.mldn.dibmp.service.IFinancialService, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:22,342 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to local registry, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:22,342 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=2704&revision=dev&side=provider&timestamp=1509956542171&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:22,342 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Register dubbo service cn.mldn.dibmp.service.IFinancialService url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=2704&revision=dev&side=provider&timestamp=1509956542171&version=dev to registry registry://192.168.28.85:2182/com.alibaba.dubbo.registry.RegistryService?application=mldn-service-member&dubbo=2.5.6&pid=2704&registry=zookeeper&timestamp=1509956542171, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:22,654 INFO [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] Start NettyServer bind /0.0.0.0:9326, export /192.168.29.1:9326, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:22,687 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Load registry store file C:\Users\syuutou\.dubbo\dubbo-registry-192.168.28.85.cache, data: {cn.mldn.dibmp.service.IMemberService:dev=empty://192.168.29.1:9327/cn.mldn.dibmp.service.IMemberService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=3216&revision=dev&side=provider&timestamp=1509956531779&version=dev, cn.mldn.mldndubbo.service.IMessageService:dev=empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev dubbo://192.168.29.1:9327/cn.mldn.mldndubbo.service.IMessageService?anyhost=true&application=mldn-service&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=4112&revision=dev&side=provider&timestamp=1509808870612&version=dev, cn.mldn.dibmp.service.IFinancialService:dev=empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=4664&revision=dev&side=provider&timestamp=1509955226610&version=dev}, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:22,827 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Register: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=2704&revision=dev&side=provider&timestamp=1509956542171&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:23,077 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Subscribe: provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=2704&revision=dev&side=provider&timestamp=1509956542171&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:23,248 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Notify urls for subscribe url provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=2704&revision=dev&side=provider&timestamp=1509956542171&version=dev, urls: [empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=2704&revision=dev&side=provider&timestamp=1509956542171&version=dev], dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:22:23,345 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Dubbo SpringContainer started!, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:29,569 INFO [com.alibaba.dubbo.common.logger.LoggerFactory] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2017-11-06 16:28:29,674 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:33,518 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] The service ready on spring started. service: cn.mldn.dibmp.service.IFinancialService, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:33,679 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to local registry, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:33,680 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3604&revision=dev&side=provider&timestamp=1509956913547&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:33,680 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Register dubbo service cn.mldn.dibmp.service.IFinancialService url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3604&revision=dev&side=provider&timestamp=1509956913547&version=dev to registry registry://192.168.28.85:2182/com.alibaba.dubbo.registry.RegistryService?application=mldn-service-member&dubbo=2.5.6&pid=3604&registry=zookeeper&timestamp=1509956913534, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:33,926 INFO [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] Start NettyServer bind /0.0.0.0:9326, export /192.168.29.1:9326, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:33,954 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Load registry store file C:\Users\syuutou\.dubbo\dubbo-registry-192.168.28.85.cache, data: {cn.mldn.dibmp.service.IMemberService:dev=empty://192.168.29.1/cn.mldn.dibmp.service.IMemberService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=5704&revision=0.0.1&side=consumer&timestamp=1509956570202&version=dev empty://192.168.29.1/cn.mldn.dibmp.service.IMemberService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=5704&revision=0.0.1&side=consumer&timestamp=1509956570202&version=dev dubbo://192.168.29.1:9327/cn.mldn.dibmp.service.IMemberService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=3216&revision=dev&side=provider&timestamp=1509956531779&version=dev, cn.mldn.mldndubbo.service.IMessageService:dev=empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev dubbo://192.168.29.1:9327/cn.mldn.mldndubbo.service.IMessageService?anyhost=true&application=mldn-service&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=4112&revision=dev&side=provider&timestamp=1509808870612&version=dev, cn.mldn.dibmp.service.IFinancialService:dev=empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=2704&revision=dev&side=provider&timestamp=1509956542171&version=dev}, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:34,158 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Register: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3604&revision=dev&side=provider&timestamp=1509956913547&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:34,766 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Subscribe: provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3604&revision=dev&side=provider&timestamp=1509956913547&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:35,232 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Notify urls for subscribe url provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3604&revision=dev&side=provider&timestamp=1509956913547&version=dev, urls: [empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3604&revision=dev&side=provider&timestamp=1509956913547&version=dev], dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:28:35,263 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Dubbo SpringContainer started!, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:47,897 INFO [com.alibaba.dubbo.common.logger.LoggerFactory] - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2017-11-06 16:30:48,008 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:52,467 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] The service ready on spring started. service: cn.mldn.dibmp.service.IFinancialService, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:52,651 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to local registry, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:52,652 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Export dubbo service cn.mldn.dibmp.service.IFinancialService to url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:52,652 INFO [com.alibaba.dubbo.config.AbstractConfig] -  [DUBBO] Register dubbo service cn.mldn.dibmp.service.IFinancialService url dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev to registry registry://192.168.28.85:2182/com.alibaba.dubbo.registry.RegistryService?application=mldn-service-member&dubbo=2.5.6&pid=3200&registry=zookeeper&timestamp=1509957052484, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:52,908 INFO [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] Start NettyServer bind /0.0.0.0:9326, export /192.168.29.1:9326, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:52,933 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Load registry store file C:\Users\syuutou\.dubbo\dubbo-registry-192.168.28.85.cache, data: {cn.mldn.dibmp.service.IMemberService:dev=empty://192.168.29.1/cn.mldn.dibmp.service.IMemberService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=5704&revision=0.0.1&side=consumer&timestamp=1509956570202&version=dev empty://192.168.29.1/cn.mldn.dibmp.service.IMemberService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=5704&revision=0.0.1&side=consumer&timestamp=1509956570202&version=dev dubbo://192.168.29.1:9327/cn.mldn.dibmp.service.IMemberService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IMemberService&methods=getRoleAndActionByMember,get&pid=3216&revision=dev&side=provider&timestamp=1509956531779&version=dev, cn.mldn.mldndubbo.service.IMessageService:dev=empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=configurators&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev empty://192.168.29.1/cn.mldn.mldndubbo.service.IMessageService?application=mldn-service-test&category=routers&dubbo=2.5.6&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=11236&revision=dev&side=consumer&timestamp=1509808899069&version=dev dubbo://192.168.29.1:9327/cn.mldn.mldndubbo.service.IMessageService?anyhost=true&application=mldn-service&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.mldndubbo.service.IMessageService&methods=echo&pid=4112&revision=dev&side=provider&timestamp=1509808870612&version=dev, cn.mldn.dibmp.service.IFinancialService:dev=empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3604&revision=dev&side=provider&timestamp=1509956913547&version=dev}, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:53,088 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Register: dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:53,238 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Subscribe: provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:53,351 INFO [com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry] -  [DUBBO] Notify urls for subscribe url provider://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, urls: [empty://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&category=configurators&check=false&default.timeout=10000000&dubbo=2.5.6&generic=false&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev], dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:30:53,393 INFO [com.alibaba.dubbo.container.Main] -  [DUBBO] Dubbo SpringContainer started!, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:31:13,668 WARN [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] All clients has discontected from /192.168.29.1:9326. You can graceful shutdown now., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:31:13,678 INFO [com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol] -  [DUBBO] disconected from /192.168.29.1:51370,url:dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&channel.readonly.sent=true&codec=dubbo&default.timeout=10000000&dubbo=2.5.6&generic=false&heartbeat=60000&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:32:37,532 ERROR [com.alibaba.dubbo.rpc.filter.ExceptionFilter] -  [DUBBO] Got unchecked and undeclared exception which called by 192.168.29.1. service: cn.mldn.dibmp.service.IFinancialService, method: addStorageApply, exception: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+### The error may involve cn.mldn.dibmp.dao.IStorageApplyDAO.doCreate-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO storage_apply(title,pid,cid,wiid,wid,note,status,appmid)   VALUES (?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+; ]; Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)), dubbo version: 2.5.6, current host: 127.0.0.1
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+### The error may involve cn.mldn.dibmp.dao.IStorageApplyDAO.doCreate-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO storage_apply(title,pid,cid,wiid,wid,note,status,appmid)   VALUES (?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+; ]; Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:247)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy17.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy21.doCreate(Unknown Source)
+	at cn.mldn.dibmp.service.impl.FinancialServiceImpl.addStorageApply(FinancialServiceImpl.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:338)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy23.addStorageApply(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:100)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1016)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2543)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1737)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:998)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3051)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:494)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy26.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 48 more
+2017-11-06 16:32:37,599 WARN [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] All clients has discontected from /192.168.29.1:9326. You can graceful shutdown now., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:32:37,607 INFO [com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol] -  [DUBBO] disconected from /192.168.29.1:51444,url:dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&channel.readonly.sent=true&codec=dubbo&default.timeout=10000000&dubbo=2.5.6&generic=false&heartbeat=60000&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:34:26,579 WARN [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] All clients has discontected from /192.168.29.1:9326. You can graceful shutdown now., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:34:26,581 INFO [com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol] -  [DUBBO] disconected from /192.168.29.1:51511,url:dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&channel.readonly.sent=true&codec=dubbo&default.timeout=10000000&dubbo=2.5.6&generic=false&heartbeat=60000&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:37:22,503 ERROR [com.alibaba.dubbo.rpc.filter.ExceptionFilter] -  [DUBBO] Got unchecked and undeclared exception which called by 192.168.29.1. service: cn.mldn.dibmp.service.IFinancialService, method: addStorageApply, exception: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+### The error may involve cn.mldn.dibmp.dao.IStorageApplyDAO.doCreate-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO storage_apply(title,pid,cid,wiid,wid,note,status,appmid)   VALUES (?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+; ]; Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)), dubbo version: 2.5.6, current host: 127.0.0.1
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+### The error may involve cn.mldn.dibmp.dao.IStorageApplyDAO.doCreate-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO storage_apply(title,pid,cid,wiid,wid,note,status,appmid)   VALUES (?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+; ]; Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:247)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy17.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy21.doCreate(Unknown Source)
+	at cn.mldn.dibmp.service.impl.FinancialServiceImpl.addStorageApply(FinancialServiceImpl.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:338)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy23.addStorageApply(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:100)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1016)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2543)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1737)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:998)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3051)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:494)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy26.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 48 more
+2017-11-06 16:37:22,580 WARN [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] All clients has discontected from /192.168.29.1:9326. You can graceful shutdown now., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:37:22,582 INFO [com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol] -  [DUBBO] disconected from /192.168.29.1:51592,url:dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&channel.readonly.sent=true&codec=dubbo&default.timeout=10000000&dubbo=2.5.6&generic=false&heartbeat=60000&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:37:36,595 WARN [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] All clients has discontected from /192.168.29.1:9326. You can graceful shutdown now., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:37:36,597 INFO [com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol] -  [DUBBO] disconected from /192.168.29.1:51613,url:dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&channel.readonly.sent=true&codec=dubbo&default.timeout=10000000&dubbo=2.5.6&generic=false&heartbeat=60000&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:39:11,773 ERROR [com.alibaba.dubbo.rpc.filter.ExceptionFilter] -  [DUBBO] Got unchecked and undeclared exception which called by 192.168.29.1. service: cn.mldn.dibmp.service.IFinancialService, method: addStorageApply, exception: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+### The error may involve cn.mldn.dibmp.dao.IStorageApplyDAO.doCreate-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO storage_apply(title,pid,cid,wiid,wid,note,status,appmid)   VALUES (?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+; ]; Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)), dubbo version: 2.5.6, current host: 127.0.0.1
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+### The error may involve cn.mldn.dibmp.dao.IStorageApplyDAO.doCreate-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO storage_apply(title,pid,cid,wiid,wid,note,status,appmid)   VALUES (?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+; ]; Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`)); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:247)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy17.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy21.doCreate(Unknown Source)
+	at cn.mldn.dibmp.service.impl.FinancialServiceImpl.addStorageApply(FinancialServiceImpl.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:338)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:197)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy23.addStorageApply(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:61)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:69)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:100)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:98)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`demo`.`storage_apply`, CONSTRAINT `fk_pid13` FOREIGN KEY (`pid`) REFERENCES `province` (`pid`))
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.Util.getInstance(Util.java:381)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1016)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3376)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3308)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1837)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:1961)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2543)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1737)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:998)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3051)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:494)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy26.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 48 more
+2017-11-06 16:39:11,880 WARN [com.alibaba.dubbo.remoting.transport.AbstractServer] -  [DUBBO] All clients has discontected from /192.168.29.1:9326. You can graceful shutdown now., dubbo version: 2.5.6, current host: 127.0.0.1
+2017-11-06 16:39:11,886 INFO [com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol] -  [DUBBO] disconected from /192.168.29.1:51723,url:dubbo://192.168.29.1:9326/cn.mldn.dibmp.service.IFinancialService?anyhost=true&application=mldn-service-member&channel.readonly.sent=true&codec=dubbo&default.timeout=10000000&dubbo=2.5.6&generic=false&heartbeat=60000&interface=cn.mldn.dibmp.service.IFinancialService&methods=addStorageApply,addStorageRecord,listStorageRecords,listStorageApplys&pid=3200&revision=dev&side=provider&timestamp=1509957052494&version=dev, dubbo version: 2.5.6, current host: 127.0.0.1
