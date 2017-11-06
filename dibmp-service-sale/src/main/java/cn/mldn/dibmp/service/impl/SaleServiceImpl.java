@@ -34,6 +34,5 @@ public class SaleServiceImpl implements ISaleService{
 		return true;
 	}
 	
-	SJFDKSLJFSLDKJFKLSDJFSKDL
-rtyrtyryttyry
+	
 }
