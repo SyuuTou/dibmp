@@ -496,6 +496,7 @@
 	<modules>
 		<module>dibmp-util</module>
 		<module>dibmp-service-member</module>
+		<module>dibmp-service-financial</module>
 		<module>dibmp-service-sale</module>
 		<module>dibmp-api</module>
 		<module>dibmp-web</module>
