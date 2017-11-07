@@ -13,5 +13,5 @@ public interface IStorageApplyDAO {
 	
 	public boolean doCreate(StorageApply vo) ;
 	
-	//public List<StorageApply> findSplit(Map<String,Object> params) ;
+	public List<StorageApply> findSplit(Map<String,Object> params) ;
 }

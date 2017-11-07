@@ -1,6 +1,8 @@
 package cn.mldn.dibmp.service.test;
 
+import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Resource;
@@ -58,8 +60,9 @@ public class TestFinancialService extends TestCase {
 			sa.setCid((long)i);
 			sa.setWiid((long)i);
 			sa.setWid((long)i);
+			sa.setPubdate(new Date());
 			sa.setNote("note"+i);
-			sa.setStatus(i);
+			sa.setStatus(0);
 			sa.setAppmid("appmid"+i);
 			System.err.println(this.financialService.addStorageApply(sa));;
 		}
@@ -76,9 +79,21 @@ public class TestFinancialService extends TestCase {
 			sr.setNum(i);
 			sr.setPrice((double)1);
 			sr.setWeight((double)i);
-			sr.setStatus(i);
+			sr.setStatus(0);
+			sr.setIndate(new Date());
 			sr.setInmid("inmid"+i);
 			System.err.println(this.financialService.addStorageRecord(sr));;
 		}
+	}
+	@Test
+	public void testList() {
+		List<StorageApply> list = this.financialService.list(null, null, 1L, 5);
+		list.forEach((e)->{
+			System.err.println(e);
+		});
+		/*System.err.println("***************");
+		for(StorageApply tmp:list) {
+			System.err.println(tmp);
+		}*/
 	}
 }

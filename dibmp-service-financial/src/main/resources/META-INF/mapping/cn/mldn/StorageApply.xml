@@ -2,23 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.mldn.dibmp.dao.IStorageApplyDAO">
+	<sql id="selectBase">
+		SELECT said,title,pid,cid,wiid,wid,pubdate,note,status,appmid FROM storage_apply 
+	</sql>
 	<select id="findAll" resultType="StorageApply">
-		SELECT said,title,pid,cid,wiid,wid,note,status,appmid FROM storage_apply ;
+		<include refid="selectBase" />
 	</select>
 	<insert id="doCreate" parameterType="StorageApply" keyProperty="said"
 			useGeneratedKeys="true">	<!-- 使用别名 --> 
-		INSERT INTO storage_apply(title,pid,cid,wiid,wid,note,status,appmid)
-		VALUES (#{title},#{pid},#{cid},#{wiid},#{wid},#{note},#{status},#{appmid}) 
+		INSERT INTO storage_apply(title,pid,cid,wiid,wid,pubdate,note,status,appmid)
+		VALUES (#{title},#{pid},#{cid},#{wiid},#{wid},#{pubdate},#{note},#{status},#{appmid}) 
 	</insert>
 	
 		<!-- 查询全部之中的resultType描述的是集合里面的每一项具体的类型 -->
-	<!-- <select id="findSplit" resultType="News" parameterType="Map">
-		SELECT nid,title,pub_date AS pubdate,note FROM news
+	 <select id="findSplit" resultType="StorageApply" parameterType="Map">
+		<include refid="selectBase" />
 		<where>
 			<if test="column != null and keyWord != null">
 				${column} LIKE #{keyWord}
 			</if>
 		</where>
 		LIMIT #{start},#{lineSize}
-	</select>  -->
+	</select> 
 </mapper>

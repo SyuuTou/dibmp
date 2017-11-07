@@ -1,5 +1,8 @@
 package cn.mldn.dibmp.service.impl;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.Resource;
@@ -38,6 +41,16 @@ public class FinancialServiceImpl implements IFinancialService {
 	@Override
 	public boolean addStorageRecord(StorageRecord vo) {
 		return this.storageRecordDAO.doCreate(vo);
+	}
+	@Override
+	public List<StorageApply> list(String column, String keyWord,Long currentPage, Integer lineSize) {
+		Map<String,Object> map=new HashMap<>();
+		map.put("column",column);
+		map.put("keyWord", "%"+keyWord+"%");
+		map.put("start", lineSize*(currentPage-1)); //开始索引
+		map.put("lineSize",lineSize);
+		return this.storageApplyDAO.findSplit(map);
+		
 	}
 
 	

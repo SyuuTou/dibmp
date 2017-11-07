@@ -1,6 +1,7 @@
 package cn.mldn.dibmp.vo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @SuppressWarnings("serial")
 public class StorageRecord implements Serializable{
@@ -11,29 +12,18 @@ public class StorageRecord implements Serializable{
 	private Integer num;
 	private Double price;
 	private Double weight;
+	//审核之后的状态此处进行假设 1:表示审核通过；0:表示审核不通过
 	private Integer status;
+	//审核人提交日期
+	private Date indate;
 	private String inmid;
-	
 	public StorageRecord() {
-		super();
-	}
-	public StorageRecord(Long srid, Long said, Long gid, String name, Integer num, Double price, Double weight,
-			Integer status, String inmid) {
-		super();
-		this.srid = srid;
-		this.said = said;
-		this.gid = gid;
-		this.name = name;
-		this.num = num;
-		this.price = price;
-		this.weight = weight;
-		this.status = status;
-		this.inmid = inmid;
 	}
 	@Override
 	public String toString() {
-		return "Storage_record [srid=" + srid + ", said=" + said + ", gid=" + gid + ", name=" + name + ", num=" + num
-				+ ", price=" + price + ", weight=" + weight + ", status=" + status + ", inmid=" + inmid + "]";
+		return "StorageRecord [srid=" + srid + ", said=" + said + ", gid=" + gid + ", name=" + name + ", num=" + num
+				+ ", price=" + price + ", weight=" + weight + ", status=" + status + ", indate=" + indate + ", inmid="
+				+ inmid + "]";
 	}
 	public Long getSrid() {
 		return srid;
@@ -83,12 +73,16 @@ public class StorageRecord implements Serializable{
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
+	public Date getIndate() {
+		return indate;
+	}
+	public void setIndate(Date indate) {
+		this.indate = indate;
+	}
 	public String getInmid() {
 		return inmid;
 	}
 	public void setInmid(String inmid) {
 		this.inmid = inmid;
 	}
-	
-	
 }

@@ -33,6 +33,8 @@ public interface IFinancialService {
 	 */
 	public boolean addStorageRecord(StorageRecord vo) ;
 	
+	public List<StorageApply> list(String column, String keyWord,Long currentPage, Integer lineSize);
+	
 	//public Map<String,Set<String>> getStorageApplyAndStorageRecord() ;
 
 }

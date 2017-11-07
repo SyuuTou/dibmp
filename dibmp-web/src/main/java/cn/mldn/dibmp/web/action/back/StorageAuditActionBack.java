@@ -1,11 +1,17 @@
 package cn.mldn.dibmp.web.action.back;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import cn.mldn.dibmp.service.IFinancialService;
 import cn.mldn.util.action.abs.AbstractAction;
 import cn.mldn.util.web.SplitPageUtil;
+
+//@Resource
+//private IFinancialService financialService;
 
 @Controller
 @RequestMapping("/pages/back/admin/storageaudit/*")

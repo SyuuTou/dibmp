@@ -11,7 +11,6 @@ public class StorageApplyDetails implements Serializable{
 	private Double price;
 	private Double weight;
 	public StorageApplyDetails() {
-		super();
 	}
 	public StorageApplyDetails(Long sadid, Long gid, String name, Integer num, Double price, Double weight) {
 		super();
