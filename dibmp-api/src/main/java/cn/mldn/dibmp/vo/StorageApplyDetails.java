@@ -5,6 +5,8 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class StorageApplyDetails implements Serializable{
 	private Long sadid;
+	//增加了入库单的外键关联
+	//private Long said;
 	private Long gid;
 	private String name;
 	private Integer num;

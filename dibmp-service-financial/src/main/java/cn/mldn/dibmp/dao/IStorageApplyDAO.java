@@ -14,4 +14,6 @@ public interface IStorageApplyDAO {
 	public boolean doCreate(StorageApply vo) ;
 	
 	public List<StorageApply> findSplit(Map<String,Object> params) ;
+	
+	public Long getAllCount(Map<String,String> params);
 }

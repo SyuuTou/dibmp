@@ -14,12 +14,12 @@ public interface IFinancialService {
 	 * 获取所有的已审核过的清单
 	 * @return 已审核过的清单List
 	 */
-	public Set<StorageRecord>listStorageRecords() ;
+	public Set<StorageRecord>listStorageRecordsAll() ;
 	/**
 	 * 获取所有的待审核清单
 	 * @return 待审核清单List
 	 */
-	public Set<StorageApply> listStorageApplys() ;
+	public Set<StorageApply> listStorageApplysAll() ;
 	/**
 	 * 实现待审核清单数据的增加
 	 * @param vo 待审核清单的vo对象
@@ -33,7 +33,22 @@ public interface IFinancialService {
 	 */
 	public boolean addStorageRecord(StorageRecord vo) ;
 	
-	public List<StorageApply> list(String column, String keyWord,Long currentPage, Integer lineSize);
+	
+	/**
+	 * 返回StorageApply的查询后的分页数据
+	 * @return allRecords：返回经过（模糊）查询后的分页数据，调用本类的listStorageApply方法
+	 * allCounts:经过查询(附带模糊查询)之后的所有记录数
+	 */
+	public Map<String,Object> listSplitStorageApply(String column, String keyWord,Long currentPage, Integer lineSize);
+	/**
+	 * 返回经过（模糊）查询后的分页数据
+	 * @param column
+	 * @param keyWord
+	 * @param currentPage
+	 * @param lineSize
+	 * @return
+	 */
+	public List<StorageApply> listStorageApply(String column, String keyWord,Long currentPage, Integer lineSize);
 	
 	//public Map<String,Set<String>> getStorageApplyAndStorageRecord() ;
 

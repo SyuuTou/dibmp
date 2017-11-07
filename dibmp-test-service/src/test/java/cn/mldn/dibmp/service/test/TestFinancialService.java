@@ -3,6 +3,8 @@ package cn.mldn.dibmp.service.test;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import javax.annotation.Resource;
@@ -33,7 +35,7 @@ public class TestFinancialService extends TestCase {
 	public void testListStorageApply() {
 		Member member = this.memberService.get("mldn-finance");
 		System.err.println(member);
-		Set<StorageApply> allsa = this.financialService.listStorageApplys();
+		Set<StorageApply> allsa = this.financialService.listStorageApplysAll();
 		Iterator<StorageApply> itersa = allsa.iterator();
 		while(itersa.hasNext()) {
 			System.err.println(itersa.next());;
@@ -42,7 +44,7 @@ public class TestFinancialService extends TestCase {
 	
 	@Test
 	public void testListStorageRecord() {
-		Set<StorageRecord> allsr = this.financialService.listStorageRecords();
+		Set<StorageRecord> allsr = this.financialService.listStorageRecordsAll();
 		Iterator<StorageRecord> itersr = allsr.iterator();
 		while(itersr.hasNext()) {
 			System.err.println(itersr.next());;
@@ -86,14 +88,12 @@ public class TestFinancialService extends TestCase {
 		}
 	}
 	@Test
-	public void testList() {
-		List<StorageApply> list = this.financialService.list(null, null, 1L, 5);
-		list.forEach((e)->{
-			System.err.println(e);
-		});
-		/*System.err.println("***************");
-		for(StorageApply tmp:list) {
-			System.err.println(tmp);
-		}*/
+	public void testListSplitStorageApply() {
+		Map<String, Object> map = this.financialService.listSplitStorageApply("title", "qwe", 1L, 5);
+		Iterator<Entry<String, Object>> ite = map.entrySet().iterator();
+		while(ite.hasNext()) {
+			Entry<String, Object> next = ite.next();
+			System.err.println(next.getKey()+" :"+next.getValue());;
+		}
 	}
 }
