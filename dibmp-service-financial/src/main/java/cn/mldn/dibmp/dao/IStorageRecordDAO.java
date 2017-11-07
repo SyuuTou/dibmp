@@ -7,7 +7,7 @@ import java.util.Set;
 import cn.mldn.dibmp.vo.StorageRecord;
 public interface IStorageRecordDAO { 
 
-	public Set<StorageRecord> findAll();
+	public List<StorageRecord> findAll();
 	
 	public boolean doCreate(StorageRecord vo) ;
 	

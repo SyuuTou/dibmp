@@ -26,15 +26,16 @@ public class StorageAuditActionBack extends AbstractAction {
 	
 	@RequestMapping("list_prepare") 
 	public ModelAndView listDetails() {
-		SplitPageUtil spu = new SplitPageUtil("申请标题:title", "storage.audit.list.prepare.action") ;
-//		String column = spu.getColumn();
-//		String keyWord = spu.getKeyWord();
-//		long currentPage = spu.getCurrentPage();
-//		int lineSize = spu.getLineSize();
-//		Map<String, Object> map = this.financialService.listSplitStorageApply(column, keyWord, currentPage, lineSize);
-//		
+		SplitPageUtil spu = new SplitPageUtil("申请标题:title", super.getPage("storage.audit.list.prepare.action")) ;
+		String column = spu.getColumn();
+		String keyWord = spu.getKeyWord();
+		long currentPage = spu.getCurrentPage();
+		int lineSize = spu.getLineSize();
+		System.err.println("column："+column+"keyWord:"+keyWord+"currentpage:"+currentPage+"lineSize:"+lineSize) ;
+		Map<String, Object> map = this.financialService.listSplitStorageApply(column, keyWord, currentPage, lineSize);
+		System.err.println(map);
 		ModelAndView mav = new ModelAndView(super.getPage("storage.audit.list.prepare.page"));
-//		mav.addObject(map);
+		mav.addAllObjects(map);
 		return mav;
 	}
 	@RequestMapping("edit_pre") 
@@ -44,7 +45,7 @@ public class StorageAuditActionBack extends AbstractAction {
 	}
 	@RequestMapping("list_history") 
 	public ModelAndView listMyself() {
-		SplitPageUtil spu = new SplitPageUtil("申请标题:title", "storage.audit.list.history.action") ;
+		SplitPageUtil spu = new SplitPageUtil("申请标题:title", super.getPage("storage.audit.list.history.action")) ;
 		ModelAndView mav = new ModelAndView(super.getPage("storage.audit.list.history.page"));
 		return mav;
 	}

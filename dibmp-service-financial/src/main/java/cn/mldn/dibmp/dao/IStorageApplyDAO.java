@@ -9,7 +9,7 @@ import java.util.Set;
 import cn.mldn.dibmp.vo.StorageApply;
 public interface IStorageApplyDAO { 
 	
-	public Set<StorageApply> findAll();
+	public List<StorageApply> findAll();
 	
 	public boolean doCreate(StorageApply vo) ;
 	

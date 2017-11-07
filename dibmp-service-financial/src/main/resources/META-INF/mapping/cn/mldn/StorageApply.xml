@@ -20,7 +20,7 @@
 	 <select id="findSplit" resultType="StorageApply" parameterType="Map">
 		<include refid="selectBase" />
 		<where>
-			<if test="column != null and keyWord != null">
+			<if test="column != null and keyWord != null and column !=&quot;&quot; and keyWord != &quot;&quot;">
 				${column} LIKE #{keyWord}
 			</if>
 		</where>
@@ -30,7 +30,7 @@
 	<select id="getAllCount" resultType="Long" parameterType="Map">
 		select count(*) from storage_apply
 		<where>
-			<if test="column !=null and keyWord !=null">
+			<if test="column != null and keyWord != null and column !=&quot;&quot; and keyWord != &quot;&quot;">
 				${column} LIKE #{keyWord}
 			</if>
 		</where>

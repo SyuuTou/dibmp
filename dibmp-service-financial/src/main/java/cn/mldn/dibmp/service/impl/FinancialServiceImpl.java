@@ -26,12 +26,12 @@ public class FinancialServiceImpl extends AbstractService implements IFinancialS
 	private IStorageApplyDAO storageApplyDAO ;
 	
 	@Override
-	public Set<StorageRecord> listStorageRecordsAll() {
+	public List<StorageRecord> listStorageRecordsAll() {
 		System.out.println("***StorageRecord****");
 		return this.storageRecordDAO.findAll();
 	}
 	@Override
-	public Set<StorageApply> listStorageApplysAll() {
+	public List<StorageApply> listStorageApplysAll() {
 		System.out.println("***StorageApply****");
 		return this.storageApplyDAO.findAll();
 	}
@@ -44,20 +44,14 @@ public class FinancialServiceImpl extends AbstractService implements IFinancialS
 		return this.storageRecordDAO.doCreate(vo);
 	}
 	@Override
-	public List<StorageApply> listStorageApply(String column, String keyWord,Long currentPage, Integer lineSize) {
-		Map<String, Object> map = super.paramsToMap(column, keyWord, currentPage, lineSize);
-		return this.storageApplyDAO.findSplit(map);
-		
-	}
-	@Override
 	public Map<String, Object> listSplitStorageApply(String column, String keyWord,Long currentPage, Integer lineSize) {
 		Map<String,Object> map=new HashMap<>();
-		map.put("allStorageApplys", this.listStorageApply(column,keyWord,currentPage,lineSize));
+		map.put("allStorageApplys", this.storageApplyDAO.findSplit(super.paramsToMap(column, keyWord, currentPage, lineSize)));
 		
 		Map<String,String> map2=new HashMap<>();
 		map2.put("column",column);
 		map2.put("keyWord", "%"+keyWord+"%");
-		map.put("allRecords", this.storageApplyDAO.getAllCount(map2));
+		map.put("allRecorders", this.storageApplyDAO.getAllCount(map2));
 		return map;
 	}
 

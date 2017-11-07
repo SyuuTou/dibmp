@@ -26,6 +26,7 @@
 				<div>
 					<jsp:include page="/WEB-INF/pages/plugins/split_plugin_search_bar.jsp"/>
 				</div>
+				${basePath}${handleUrl}
 				<table class="table table-condensed">
 					<thead>
 						<tr>
@@ -40,19 +41,22 @@
 						</tr>
 					</thead>
 					<tbody>
+					
+					<c:forEach items="${allStorageApplys}" var="storageApply">
 						<tr>
-							<th class="text-center" style="width:10%;">20001010</th> 
-							<td class="text-left"><span id="sid-1" style="cursor:pointer;">2017双十一衣帽入库</span></td>
-							<td class="text-left"><span id="wid-1" style="cursor:pointer;">北京通州仓库一号库</span></td>
-							<td class="text-center">2019-10-09</td>
-							<td class="text-center"><span id="mid-admin" style="cursor:pointer;">老李</span></td>
-							<td class="text-center">100</td>
-							<td class="text-center">10000</td>
+							<th class="text-center" style="width:10%;">${storageApply.said}</th> 
+							<td class="text-left"><span id="sid-${storsageApply.said}" style="cursor:pointer;">${storageApply.title}</span></td>
+							<td class="text-left"><span id="wid-${storsageApply.wid}" style="cursor:pointer;">${storageApply.wid}</span></td>
+							<td class="text-center"><fmt:formatDate value="${storageApply.pubdate}" pattern="yyyy-MM-dd"/></td>
+							<td class="text-center"><span id="mid-${storageApply.appmid}" style="cursor:pointer;">${storageApply.appmid}</span></td>
+							<td class="text-center">未解决</td>
+							<td class="text-center">未解决</td>
 							<td class="text-left">
 								<a href="<%=STORAGEAUDIT_EDIT_URL%>?sid=1" class="btn btn-primary btn-xs">
 									<span class="glyphicon glyphicon-edit"></span>&nbsp;处理申请</a>
 							</td>
 						</tr>
+					</c:forEach>
 					</tbody>
 				</table>
 				<div id="splitBarDiv" style="float:right">

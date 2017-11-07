@@ -35,7 +35,7 @@ public class TestFinancialService extends TestCase {
 	public void testListStorageApply() {
 		Member member = this.memberService.get("mldn-finance");
 		System.err.println(member);
-		Set<StorageApply> allsa = this.financialService.listStorageApplysAll();
+		List<StorageApply> allsa = this.financialService.listStorageApplysAll();
 		Iterator<StorageApply> itersa = allsa.iterator();
 		while(itersa.hasNext()) {
 			System.err.println(itersa.next());;
@@ -44,7 +44,7 @@ public class TestFinancialService extends TestCase {
 	
 	@Test
 	public void testListStorageRecord() {
-		Set<StorageRecord> allsr = this.financialService.listStorageRecordsAll();
+		List<StorageRecord> allsr = this.financialService.listStorageRecordsAll();
 		Iterator<StorageRecord> itersr = allsr.iterator();
 		while(itersr.hasNext()) {
 			System.err.println(itersr.next());;
@@ -90,6 +90,7 @@ public class TestFinancialService extends TestCase {
 	@Test
 	public void testListSplitStorageApply() {
 		Map<String, Object> map = this.financialService.listSplitStorageApply("title", "qwe", 1L, 5);
+		
 		Iterator<Entry<String, Object>> ite = map.entrySet().iterator();
 		while(ite.hasNext()) {
 			Entry<String, Object> next = ite.next();
