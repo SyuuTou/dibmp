@@ -11,5 +11,7 @@ public interface IStorageRecordDAO {
 	
 	public boolean doCreate(StorageRecord vo) ;
 	
-//	public List<StorageRecord> findSplit(Map<String,Object> params) ;
+	public List<StorageRecord> findSplit(Map<String,Object> params) ;
+	
+	public Long getAllCount(Map<String,String> params);
 }

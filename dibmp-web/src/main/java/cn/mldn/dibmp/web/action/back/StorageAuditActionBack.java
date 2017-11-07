@@ -31,7 +31,6 @@ public class StorageAuditActionBack extends AbstractAction {
 		String keyWord = spu.getKeyWord();
 		long currentPage = spu.getCurrentPage();
 		int lineSize = spu.getLineSize();
-		System.err.println("column："+column+"keyWord:"+keyWord+"currentpage:"+currentPage+"lineSize:"+lineSize) ;
 		Map<String, Object> map = this.financialService.listSplitStorageApply(column, keyWord, currentPage, lineSize);
 		System.err.println(map);
 		ModelAndView mav = new ModelAndView(super.getPage("storage.audit.list.prepare.page"));
@@ -45,8 +44,14 @@ public class StorageAuditActionBack extends AbstractAction {
 	}
 	@RequestMapping("list_history") 
 	public ModelAndView listMyself() {
-		SplitPageUtil spu = new SplitPageUtil("申请标题:title", super.getPage("storage.audit.list.history.action")) ;
+		SplitPageUtil spu = new SplitPageUtil("申请标题:name", super.getPage("storage.audit.list.history.action")) ;
+		String column = spu.getColumn();
+		String keyWord = spu.getKeyWord();
+		long currentPage = spu.getCurrentPage();
+		int lineSize = spu.getLineSize();
+		Map<String, Object> map = this.financialService.listSplitStorageRecord(column, keyWord, currentPage, lineSize);
 		ModelAndView mav = new ModelAndView(super.getPage("storage.audit.list.history.page"));
+		mav.addAllObjects(map);
 		return mav;
 	}
 }

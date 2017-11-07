@@ -26,7 +26,6 @@
 				<div>
 					<jsp:include page="/WEB-INF/pages/plugins/split_plugin_search_bar.jsp"/>
 				</div>
-				${basePath}${handleUrl}
 				<table class="table table-condensed">
 					<thead>
 						<tr>
@@ -45,8 +44,8 @@
 					<c:forEach items="${allStorageApplys}" var="storageApply">
 						<tr>
 							<th class="text-center" style="width:10%;">${storageApply.said}</th> 
-							<td class="text-left"><span id="sid-${storsageApply.said}" style="cursor:pointer;">${storageApply.title}</span></td>
-							<td class="text-left"><span id="wid-${storsageApply.wid}" style="cursor:pointer;">${storageApply.wid}</span></td>
+							<td class="text-left"><span id="sid-${storageApply.said}" style="cursor:pointer;">${storageApply.title}</span></td>
+							<td class="text-left"><span id="wid-${storageApply.wid}" style="cursor:pointer;">${storageApply.wid}</span></td>
 							<td class="text-center"><fmt:formatDate value="${storageApply.pubdate}" pattern="yyyy-MM-dd"/></td>
 							<td class="text-center"><span id="mid-${storageApply.appmid}" style="cursor:pointer;">${storageApply.appmid}</span></td>
 							<td class="text-center">未解决</td>

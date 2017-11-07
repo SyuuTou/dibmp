@@ -97,4 +97,14 @@ public class TestFinancialService extends TestCase {
 			System.err.println(next.getKey()+" :"+next.getValue());;
 		}
 	}
+	@Test
+	public void testListSplitStorageRecord() {
+		Map<String, Object> map = this.financialService.listSplitStorageRecord("name","qwe", 1L, 3);
+		
+		Iterator<Entry<String, Object>> ite = map.entrySet().iterator();
+		while(ite.hasNext()) {
+			Entry<String, Object> next = ite.next();
+			System.err.println(next.getKey()+" :"+next.getValue());;
+		}
+	}
 }

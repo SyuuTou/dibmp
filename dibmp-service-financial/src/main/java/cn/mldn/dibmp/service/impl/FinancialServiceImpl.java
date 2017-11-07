@@ -54,6 +54,16 @@ public class FinancialServiceImpl extends AbstractService implements IFinancialS
 		map.put("allRecorders", this.storageApplyDAO.getAllCount(map2));
 		return map;
 	}
+	@Override
+	public Map<String, Object> listSplitStorageRecord(String column, String keyWord, Long currentPage,Integer lineSize) {
+		Map<String,Object> map=new HashMap<>();
+		map.put("allStorageRecords", this.storageRecordDAO.findSplit(super.paramsToMap(column, keyWord, currentPage, lineSize)));
+		Map<String,String> map2=new HashMap<>();
+		map2.put("column",column);
+		map2.put("keyWord", "%"+keyWord+"%");
+		map.put("allRecorders", this.storageRecordDAO.getAllCount(map2));
+		return map;
+	}
 
 	
 	

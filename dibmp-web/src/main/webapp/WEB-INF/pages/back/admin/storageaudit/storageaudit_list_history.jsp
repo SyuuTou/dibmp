@@ -37,16 +37,18 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:forEach items="${allStorageRecords}" var="StorageRecord">
 						<tr>
-							<th class="text-center" style="width:10%;">20001010</th> 
-							<td class="text-left"><span id="sid-1" style="cursor:pointer;">2017双十一衣帽入库</span></td>
-							<td class="text-left"><span id="wid-1" style="cursor:pointer;">北京通州仓库一号库</span></td>
-							<td class="text-center">2019-10-10</td>
-							<td class="text-center"><span id="mid-admin" style="cursor:pointer;">老李</span></td>
+							<th class="text-center" style="width:10%;">${StorageRecord.said}</th> 
+							<td class="text-left"><span id="sid-1" style="cursor:pointer;">未解决,根据入库单编号获得</span></td>
+							<td class="text-left"><span id="wid-1" style="cursor:pointer;">未解决,根据入库单编号获得</span></td>
+							<td class="text-center"><fmt:formatDate value="${StorageRecord.indate}" pattern="yyyy-mm-dd" /></td>
+							<td class="text-center"><span id="mid-admin" style="cursor:pointer;">未解决,根据提交人员获得</span></td>
 							<td class="text-center">100</td>
 							<td class="text-center">10000</td>
-							<td class="text-center"><span id="mid-admin" style="cursor:pointer;">老张</span></td>
+							<td class="text-center"><span id="mid-admin" style="cursor:pointer;">，根据审核人员获得${StorageRecord.inmid}</span></td>
 						</tr>
+					</c:forEach>
 					</tbody>
 				</table>
 				<div id="splitBarDiv" style="float:right">

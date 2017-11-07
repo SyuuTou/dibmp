@@ -36,7 +36,14 @@ public interface IFinancialService {
 	
 	/**
 	 * 返回StorageApply的查询后的分页数据
-	 * @return allRecords：返回经过（模糊）查询后的分页数据，调用本类的listStorageApply方法
+	 * @return allRecorders：返回经过（模糊）查询后的分页数据，调用本类的listStorageApply方法
+	 * allCounts:经过查询(附带模糊查询)之后的所有记录数
+	 */
+	public Map<String,Object> listSplitStorageRecord(String column, String keyWord,Long currentPage, Integer lineSize);
+	
+	/**
+	 * 返回StorageRecord的查询后的分页数据
+	 * @return allRecorders：返回经过（模糊）查询后的分页数据，调用本类的listStorageApply方法
 	 * allCounts:经过查询(附带模糊查询)之后的所有记录数
 	 */
 	public Map<String,Object> listSplitStorageApply(String column, String keyWord,Long currentPage, Integer lineSize);
