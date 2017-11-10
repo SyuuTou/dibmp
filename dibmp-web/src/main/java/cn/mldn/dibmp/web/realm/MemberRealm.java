@@ -40,6 +40,7 @@ public class MemberRealm extends AuthorizingRealm {
 		if (member.getLocked().equals(1)) {	// 用户被锁定了
 			throw new LockedAccountException(mid + "账户信息已经被锁定，无法登录！") ;
 		}	// 要传递加密后的密码数据信息
+		SecurityUtils.getSubject().getSession().setAttribute("mid", member.getMid());
 		SecurityUtils.getSubject().getSession().setAttribute("name", member.getName());
 		return new SimpleAuthenticationInfo(token.getPrincipal(), password.toCharArray(), "memberRealm");
 	}

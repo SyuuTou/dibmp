@@ -14,7 +14,10 @@ public class StorageApply implements Serializable{
 	//申请人提交日期
 	private Date pubdate;
 	private String note;
-	//该申请单的审核状态 ：设置为0  表示未进行审核，设置为1表示审核完毕
+	/*该申请单的审核状态 ：
+	 * 0  表示未提交审核申请，
+	 * 1表示已经提交审核申请,
+	 * */
 	private Integer status;
 	private String appmid;
 	

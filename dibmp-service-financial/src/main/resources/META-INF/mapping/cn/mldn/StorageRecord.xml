@@ -3,8 +3,25 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.mldn.dibmp.dao.IStorageRecordDAO">
 	<sql id="selectBase">
-		SELECT srid,said,gid,name,num,price,weight,status,indate,inmid FROM storage_record
+		SELECT srid,said,gid,name,num,price,weight,status,note,indate,inmid FROM storage_record
 	</sql>
+	<!--定义插入的基础语句  -->
+	<sql id="insertBase">
+		INSERT INTO storage_record(said,gid,name,num,price,weight,status,note,indate,inmid)
+	</sql>
+	<insert id="doCreate" parameterType="StorageRecord" keyProperty="srid"
+			useGeneratedKeys="true">	 
+		INSERT INTO storage_record(said,gid,name,num,price,weight,status,note,indate,inmid)
+		VALUES (#{said},#{gid},#{name},#{num},#{price},#{weight},#{status},#{note},#{indate},#{inmid}) 
+	</insert>
+	<!-- 批量插入 -->
+	<insert id="addBatch" parameterType="List">	
+		<include refid="insertBase" /> values
+		<foreach collection="list" item="item" index="index" separator="," >  
+        (#{item.said},#{item.gid},#{item.name},#{item.num},#{item.price},#{item.weight},#{item.status},#{item.note},#{item.indate},#{item.inmid})  
+   		</foreach>
+	</insert>
+	
 	<select id="findAll" resultType="StorageRecord">
 		 <include refid="selectBase" />
 	</select>
@@ -20,7 +37,7 @@
 	</select>
 	
 	<select id="getAllCount" resultType="Long" parameterType="Map">
-		select count(*) from storage_record
+		select count(distinct(said)) from storage_record
 		<where>
 			<if test="column != null and keyWord != null and column !=&quot;&quot; and keyWord != &quot;&quot;">
 				${column} LIKE #{keyWord}
@@ -28,10 +45,11 @@
 		</where>
 	</select>
 	
-	<insert id="doCreate" parameterType="StorageRecord" keyProperty="srid"
-			useGeneratedKeys="true">	<!-- 使用别名 --> 
-		INSERT INTO storage_record(said,gid,name,num,price,weight,status,indate,inmid)
-		VALUES (#{said},#{gid},#{name},#{num},#{price},#{weight},#{status},#{indate},#{inmid}) 
-	</insert>
+	<select id="getCheckedStorageApplysGoodsAmount" resultType="Long" parameterType="Long">
+		select sum(num) from storage_record where said =#{said}
+	</select>
 	
+	<select id="getCheckedStorageApplysTotalPrice" resultType="Double" parameterType="Long">
+		select sum(num*price) from storage_record where said=#{said};
+	</select>
 </mapper>

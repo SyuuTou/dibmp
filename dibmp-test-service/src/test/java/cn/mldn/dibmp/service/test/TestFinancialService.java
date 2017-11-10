@@ -81,20 +81,25 @@ public class TestFinancialService extends TestCase {
 			sr.setNum(i);
 			sr.setPrice((double)1);
 			sr.setWeight((double)i);
+			sr.setNote("note"+i);
 			sr.setStatus(0);
 			sr.setIndate(new Date());
 			sr.setInmid("inmid"+i);
-			System.err.println(this.financialService.addStorageRecord(sr));;
+			System.err.println("增长成功后返回的自增长id："+this.financialService.addStorageRecord(sr));
 		}
 	}
 	@Test
+	public void testSubmitApply() {
+		
+	}
+	@Test
 	public void testListSplitStorageApply() {
-		Map<String, Object> map = this.financialService.listSplitStorageApply("title", "qwe", 1L, 5);
+		Map<String, Object> map = this.financialService.listSplitStorageApply(null, null, 1L, 5);
 		
 		Iterator<Entry<String, Object>> ite = map.entrySet().iterator();
 		while(ite.hasNext()) {
 			Entry<String, Object> next = ite.next();
-			System.err.println(next.getKey()+" :"+next.getValue());;
+			System.err.println(next.getKey()+" :"+next.getValue());
 		}
 	}
 	@Test
@@ -106,5 +111,10 @@ public class TestFinancialService extends TestCase {
 			Entry<String, Object> next = ite.next();
 			System.err.println(next.getKey()+" :"+next.getValue());;
 		}
+	}
+	
+	@Test
+	public void testGetStorageApplyBySaid() {
+		System.err.println(this.financialService.getStorageApplyBySaid(1L));
 	}
 }

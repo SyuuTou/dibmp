@@ -31,7 +31,7 @@ public interface IFinancialService {
 	 * @param vo 已审核清单的vo对象
 	 * @return 添加之后的布尔值
 	 */
-	public boolean addStorageRecord(StorageRecord vo) ;
+	public Long addStorageRecord(StorageRecord vo) ;
 	
 	
 	/**
@@ -47,5 +47,28 @@ public interface IFinancialService {
 	 * allCounts:经过查询(附带模糊查询)之后的所有记录数
 	 */
 	public Map<String,Object> listSplitStorageApply(String column, String keyWord,Long currentPage, Integer lineSize);
-
+	/**
+	 * 
+	 * @param said 传入的申请单的编号
+	 * @return 返回申请单的vo对象
+	 */
+	public StorageApply getStorageApplyBySaid(Long said);
+	
+	/**
+	 * 根据申请单编号获取所有的申请单详情信息，用于申请单的预审核页面的回显
+	 * @param said 申请单编号
+	 * @return 申请单对应的详情信息
+	 */
+	public Map<String,Object> listStorageApplyDetails(Long said);
+	
+	/**
+	 * 提交审核申请
+	 * @param said 提交的申请单编号
+	 * @param mid 当前用户
+	 * @param status 审核状态
+	 * @param note 审核信息
+	 * @return 审核通过返回true,审核失败返回false
+	 */
+	public boolean submitApply(Long said,String mid,Integer status,String note);
+	
 }

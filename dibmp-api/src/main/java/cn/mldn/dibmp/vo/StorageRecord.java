@@ -12,6 +12,7 @@ public class StorageRecord implements Serializable{
 	private Integer num;
 	private Double price;
 	private Double weight;
+	private String note;
 	//审核之后的状态此处进行假设 1:表示审核通过；0:表示审核不通过
 	private Integer status;
 	//审核人提交日期
@@ -22,8 +23,8 @@ public class StorageRecord implements Serializable{
 	@Override
 	public String toString() {
 		return "StorageRecord [srid=" + srid + ", said=" + said + ", gid=" + gid + ", name=" + name + ", num=" + num
-				+ ", price=" + price + ", weight=" + weight + ", status=" + status + ", indate=" + indate + ", inmid="
-				+ inmid + "]";
+				+ ", price=" + price + ", weight=" + weight + ", note=" + note + ", status=" + status + ", indate="
+				+ indate + ", inmid=" + inmid + "]";
 	}
 	public Long getSrid() {
 		return srid;
@@ -67,6 +68,12 @@ public class StorageRecord implements Serializable{
 	public void setWeight(Double weight) {
 		this.weight = weight;
 	}
+	public String getNote() {
+		return note;
+	}
+	public void setNote(String note) {
+		this.note = note;
+	}
 	public Integer getStatus() {
 		return status;
 	}
@@ -85,4 +92,5 @@ public class StorageRecord implements Serializable{
 	public void setInmid(String inmid) {
 		this.inmid = inmid;
 	}
+	
 }

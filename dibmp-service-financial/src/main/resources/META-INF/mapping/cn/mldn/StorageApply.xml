@@ -5,23 +5,31 @@
 	<sql id="selectBase">
 		SELECT said,title,pid,cid,wiid,wid,pubdate,note,status,appmid FROM storage_apply
 	</sql>
-	<!-- 查询全部之中的resultType描述的是集合里面的每一项具体的类型 -->
-	<select id="findAll" resultType="StorageApply">
-		<include refid="selectBase" />
-	</select>
 	
 	<insert id="doCreate" parameterType="StorageApply" keyProperty="said"
 			useGeneratedKeys="true">	<!-- 使用别名 --> 
 		INSERT INTO storage_apply(title,pid,cid,wiid,wid,pubdate,note,status,appmid)
 		VALUES (#{title},#{pid},#{cid},#{wiid},#{wid},#{pubdate},#{note},#{status},#{appmid}) 
 	</insert>
-		
+	<update id="updateStatusTo2" parameterType="Long">
+		update storage_apply set status=2 where said2 =#{said}
+	</update>
+	<!-- 查询全部之中的resultType描述的是集合里面的每一项具体的类型 -->
+	<select id="findAll" resultType="StorageApply">
+		<include refid="selectBase" />
+	</select>
+	
+	<select id="findBySaid" resultType="StorageApply" parameterType="Long">
+		<include refid="selectBase" /> where said =#{said}
+	</select>
+	
 	 <select id="findSplit" resultType="StorageApply" parameterType="Map">
 		<include refid="selectBase" />
 		<where>
 			<if test="column != null and keyWord != null and column !=&quot;&quot; and keyWord != &quot;&quot;">
-				${column} LIKE #{keyWord}
+				${column} LIKE #{keyWord} and
 			</if>
+			status=1
 		</where>
 		LIMIT #{start},#{lineSize}
 	</select> 

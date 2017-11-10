@@ -41,17 +41,17 @@
 					</thead>
 					<tbody>
 					
-					<c:forEach items="${allStorageApplys}" var="storageApply">
+					<c:forEach items="${StorageApplyInfos}" var="StorageApplyInfo">
 						<tr>
-							<th class="text-center" style="width:10%;">${storageApply.said}</th> 
-							<td class="text-left"><span id="sid-${storageApply.said}" style="cursor:pointer;">${storageApply.title}</span></td>
-							<td class="text-left"><span id="wid-${storageApply.wid}" style="cursor:pointer;">${storageApply.wid}</span></td>
-							<td class="text-center"><fmt:formatDate value="${storageApply.pubdate}" pattern="yyyy-MM-dd"/></td>
-							<td class="text-center"><span id="mid-${storageApply.appmid}" style="cursor:pointer;">${storageApply.appmid}</span></td>
-							<td class="text-center">未解决</td>
-							<td class="text-center">未解决</td>
+							<th class="text-center" style="width:10%;">${StorageApplyInfo['singleStorageApply'].said}</th> 
+							<td class="text-left"><span id="said-${StorageApplyInfo['singleStorageApply'].said}" style="cursor:pointer;">${StorageApplyInfo['singleStorageApply'].title}</span></td>
+							<td class="text-left"><span id="wid-${StorageApplyInfo['singleStorageApply'].wid}" style="cursor:pointer;">仓库名称未解决：${StorageApplyInfo['warehouse'].name}</span></td>
+							<td class="text-center"><fmt:formatDate value="${StorageApplyInfo['singleStorageApply'].pubdate}" pattern="yyyy-MM-dd"/></td>
+							<td class="text-center"><span id="mid-${StorageApplyInfo['singleStorageApply'].appmid}" style="cursor:pointer;">${StorageApplyInfo['member'].name}</span></td>
+							<td class="text-center">${StorageApplyInfo['allAmount']}</td>
+							<td class="text-center">${StorageApplyInfo['totalPrice']}</td>
 							<td class="text-left">
-								<a href="<%=STORAGEAUDIT_EDIT_URL%>?sid=1" class="btn btn-primary btn-xs">
+								<a href="<%=STORAGEAUDIT_EDIT_URL%>?said=${StorageApplyInfo['singleStorageApply'].said}" class="btn btn-primary btn-xs">
 									<span class="glyphicon glyphicon-edit"></span>&nbsp;处理申请</a>
 							</td>
 						</tr>

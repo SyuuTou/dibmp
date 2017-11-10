@@ -37,16 +37,16 @@
 						</tr>
 					</thead>
 					<tbody>
-					<c:forEach items="${allStorageRecords}" var="StorageRecord">
+					<c:forEach items="${StorageRecordInfos}" var="StorageRecord">
 						<tr>
-							<th class="text-center" style="width:10%;">${StorageRecord.said}</th> 
-							<td class="text-left"><span id="sid-1" style="cursor:pointer;">未解决,根据入库单编号获得</span></td>
+							<th class="text-center" style="width:10%;">${StorageRecord['singleStorageRecord'].said}</th> 
+							<td class="text-left"><span id="said-${StorageRecord['singleStorageRecord'].said}" style="cursor:pointer;">${StorageRecord['singleStorageApply'].title}</span></td>
 							<td class="text-left"><span id="wid-1" style="cursor:pointer;">未解决,根据入库单编号获得</span></td>
-							<td class="text-center"><fmt:formatDate value="${StorageRecord.indate}" pattern="yyyy-mm-dd" /></td>
-							<td class="text-center"><span id="mid-admin" style="cursor:pointer;">未解决,根据提交人员获得</span></td>
-							<td class="text-center">100</td>
-							<td class="text-center">10000</td>
-							<td class="text-center"><span id="mid-admin" style="cursor:pointer;">，根据审核人员获得${StorageRecord.inmid}</span></td>
+							<td class="text-center"><fmt:formatDate value="${StorageRecord['singleStorageRecord'].indate}" pattern="yyyy-MM-dd" /></td>
+							<td class="text-center"><span id="mid-${StorageRecord['subMember'].mid}" style="cursor:pointer;">${StorageRecord['subMember'].name}</span></td>
+							<td class="text-center">${StorageRecord['allAmount']}</td>
+							<td class="text-center">${StorageRecord['totalPrice']}</td>
+							<td class="text-center"><span id="mid-${StorageRecord['checkMember'].mid}" style="cursor:pointer;">${StorageRecord['checkMember'].name}</span></td>
 						</tr>
 					</c:forEach>
 					</tbody>

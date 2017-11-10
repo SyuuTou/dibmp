@@ -5,7 +5,7 @@ $(function(){
 			$("#memberInfo").modal("toggle") ;
 		}) ;
 	}) ;
-	$("span[id^=sid-]").each(function(){
+	$("span[id^=said-]").each(function(){
 		$(this).on("click",function(){
 			sid = this.id.split("-")[1] ;
 			$("#storageDetailsInfo").modal("toggle") ;

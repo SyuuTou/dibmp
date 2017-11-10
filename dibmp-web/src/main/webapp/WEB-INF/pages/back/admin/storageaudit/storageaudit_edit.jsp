@@ -6,7 +6,7 @@
 <script type="text/javascript" src="js/pages/back/admin/storageaudit/storageaudit_edit.js"></script>
 <script type="text/javascript" src="js/split_page.js"></script>
 <%!
-	public static final String STORAGEAUDIT_EDIT_URL = "pages/back/admin/storageaudit/edit.action" ;
+	public static final String STORAGEAUDIT_EDIT_URL = "pages/back/admin/storageaudit/do_edit.action" ;
 %>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
@@ -27,47 +27,48 @@
 					<table class="table table-striped table-bordered table-hover">
 						<tr> 
 							<td style="width:150px;"><strong>入库标题：</strong></td>
-							<td>双13备货</td>
+							<td id="said-${said}">${singleStorageApply.title}</td>
 						</tr>
 						<tr>
 							<td><strong>存入仓库名称：</strong></td>
-							<td><span id="showWarehouse" style="cursor:pointer;">北京市 北京市 通州一号仓库</span></td>
+							<td><span id="showWarehouse" style="cursor:pointer;">调用仓储接口：${singleStorageApply.wid}</span></td>
 						</tr>
 						<tr>
 							<td><strong>仓库类型：</strong></td>
-							<td>衣帽服饰</td>
+							<td>调用仓储接口取得：${singleStorageApply.wiid}</td>
 						</tr>
 						<tr>
 							<td><strong>申请人：</strong></td>
-							<td><span id="showMember" style="cursor:pointer;">老李</span></td>
+							<td><span id="showMember" style="cursor:pointer;">${subMember.name}</span></td>
 						</tr>
 						<tr>
 							<td><strong>入库商品总价：</strong></td>
-							<td>￥20000</td>
+							<td>￥${totalPrice}</td>
 						</tr>
 						<tr>
 							<td><strong>入库单备注信息：</strong></td>
-							<td>我要上</td>
+							<td>${singleStorageApply.note}</td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td><strong>审核历史：</strong></td>
 							<td>历史的所有审核信息</td>
-						</tr>
+						</tr> -->
 					</table>
 				</div>
 				<div>
-					<form class="form-horizontal" action="<%=STORAGEAUDIT_EDIT_URL%>" id="myform" method="post">
+				<%-- action="<%=STORAGEAUDIT_EDIT_URL %>" method="post" --%>
+					<form class="form-horizontal" id="myform" action="<%=STORAGEAUDIT_EDIT_URL %>" method="post">
 						<fieldset>
 							<div class="form-group" id="auditDiv">
 								<!-- 定义表单提示文字 -->
 								<label class="col-md-3 control-label" for="destination">审核结论：</label>
 								<div class="col-md-5">
 									<div class="radio-inline">
-										<label><input type="radio" id="audit" value="2" checked>
+										<label><input type="radio" id="audit" name="audit" value="0" checked>
 											&nbsp;<span class="text-danger">拒绝</span></label>
 									</div> 
 									<div class="radio-inline">
-										<label><input type="radio" id="audit" value="1">
+										<label><input type="radio" id="audit" name="audit" value="1">
 											&nbsp;<span class="text-success">通过</span></label>
 									</div> 
 								</div>
@@ -77,7 +78,7 @@
 							<!-- 定义输入表单样式，其中id主要用于设置颜色样式 -->
 							<div class="form-group" id="noteDiv">
 								<!-- 定义表单提示文字 -->
-								<label class="col-md-3 control-label" for="note">审核备注：</label>
+								<label class="col-md-3 control-label" for="note" >审核备注：</label>
 								<div class="col-md-5">
 									<!-- 定义表单输入组件 -->
 									<textarea id="note" name="note" rows="3"
@@ -85,11 +86,15 @@
 								</div>
 								<!-- 定义表单错误提示显示元素 -->
 								<div class="col-md-4" id="noteMsg"></div>
+								
 							</div> 
 							<div class="form-group">
 								<div class="col-md-5 col-md-offset-3">
-									<button type="submit" class="btn btn-primary">增加</button>
+								<!-- 取消了下面的submit属性 -->
+									<input type="hidden" name="said" value="${said}">
+									<button id="addBtn" class="btn btn-primary">增加</button>
 									<button type="reset" class="btn btn-warning">重置</button>
+									
 								</div>
 							</div>
 						</fieldset>
@@ -118,14 +123,16 @@
 										</tr>
 									</thead>
 									<tbody>
+									<c:forEach items="${allStorageApplyDetails}" var="StorageApplyDetail"> 
 										<tr class="text-primary">
-											<td class="text-center">10001</td>
-											<td class="text-left">衣服</td>
-											<td class="text-center">50</td>
-											<td class="text-center">39.2</td>
-											<td class="text-center">200</td>
-											<td class="text-center">2000</td>
+											<td class="text-center">${StorageApplyDetail.gid}</td>
+											<td class="text-left">${StorageApplyDetail.name}</td>
+											<td class="text-center">${StorageApplyDetail.num}</td>
+											<td class="text-center">${StorageApplyDetail.price}</td>
+											<td class="text-center">${StorageApplyDetail.weight}</td>
+											<td class="text-center">${StorageApplyDetail.num * StorageApplyDetail.price}</td>
 										</tr>
+									</c:forEach>
 									</tbody>
 								</table>
 							</div>

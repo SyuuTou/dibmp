@@ -5,8 +5,8 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class StorageApplyDetails implements Serializable{
 	private Long sadid;
-	//增加了入库单的外键关联
-	//private Long said;
+	//增加了同入库单的外键关联
+	private Long said;
 	private Long gid;
 	private String name;
 	private Integer num;
@@ -14,25 +14,22 @@ public class StorageApplyDetails implements Serializable{
 	private Double weight;
 	public StorageApplyDetails() {
 	}
-	public StorageApplyDetails(Long sadid, Long gid, String name, Integer num, Double price, Double weight) {
-		super();
-		this.sadid = sadid;
-		this.gid = gid;
-		this.name = name;
-		this.num = num;
-		this.price = price;
-		this.weight = weight;
-	}
 	@Override
 	public String toString() {
-		return "Storage_apply_details [sadid=" + sadid + ", gid=" + gid + ", name=" + name + ", num=" + num + ", price="
-				+ price + ", weight=" + weight + "]";
+		return "StorageApplyDetails [sadid=" + sadid + ", said=" + said + ", gid=" + gid + ", name=" + name + ", num="
+				+ num + ", price=" + price + ", weight=" + weight + "]";
 	}
 	public Long getSadid() {
 		return sadid;
 	}
 	public void setSadid(Long sadid) {
 		this.sadid = sadid;
+	}
+	public Long getSaid() {
+		return said;
+	}
+	public void setSaid(Long said) {
+		this.said = said;
 	}
 	public Long getGid() {
 		return gid;
@@ -64,6 +61,5 @@ public class StorageApplyDetails implements Serializable{
 	public void setWeight(Double weight) {
 		this.weight = weight;
 	}
-	
-	
+		
 }
