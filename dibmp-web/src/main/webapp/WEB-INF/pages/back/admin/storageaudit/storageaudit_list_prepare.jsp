@@ -45,9 +45,9 @@
 						<tr>
 							<th class="text-center" style="width:10%;">${StorageApplyInfo['singleStorageApply'].said}</th> 
 							<td class="text-left"><span id="said-${StorageApplyInfo['singleStorageApply'].said}" style="cursor:pointer;">${StorageApplyInfo['singleStorageApply'].title}</span></td>
-							<td class="text-left"><span id="wid-${StorageApplyInfo['singleStorageApply'].wid}" style="cursor:pointer;">仓库名称未解决：${StorageApplyInfo['warehouse'].name}</span></td>
+							<td class="text-left"><span id="wid-${StorageApplyInfo['singleStorageApply'].wid}" style="cursor:pointer;">${StorageApplyInfo['warehouse'].name}</span></td>
 							<td class="text-center"><fmt:formatDate value="${StorageApplyInfo['singleStorageApply'].pubdate}" pattern="yyyy-MM-dd"/></td>
-							<td class="text-center"><span id="mid-${StorageApplyInfo['singleStorageApply'].appmid}" style="cursor:pointer;">${StorageApplyInfo['member'].name}</span></td>
+							<td class="text-center"><span id="mid_${StorageApplyInfo['singleStorageApply'].appmid}" style="cursor:pointer;">${StorageApplyInfo['member'].name}</span></td>
 							<td class="text-center">${StorageApplyInfo['allAmount']}</td>
 							<td class="text-center">${StorageApplyInfo['totalPrice']}</td>
 							<td class="text-left">

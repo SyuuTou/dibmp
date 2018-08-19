@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.mldn.dibmp.dao.ISaleDAO">
-	<select id="getAllGoods" resultType="Goods">
-		SELECT gid,name,wiid,stid,price,weight,photo,note,stornum,lastin,recorder,delflag FROM goods WHERE gid=#{gid}; 
-	</select>
-</mapper>

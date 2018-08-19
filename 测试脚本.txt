@@ -1,0 +1,65 @@
+查询申请单对应的商品数量
+select sum(num) from storage_apply_details where said =1;
+
+查询申请单所对应的所有商品的总价
+select sum(num*price) from storage_apply_details where said=1;
+
+测试脚本:
+
+truncate table storage_apply;
+truncate table storage_apply_details;
+truncate table storage_record;
+truncate table goods;
+
+--入库申请单数据增加
+
+truncate table storage_apply;
+INSERT INTO storage_apply(title,pid,cid,wiid,wid,pubdate,note,status,appmid)
+VALUES ('storage_apply_1',1,1,1,1,'2017-1-1','入库申请单1',1,'mldn-sale'), 
+	   ('storage_apply_2',1,1,1,1,'2017-1-1','入库申请单2',1,'mldn-sale'), 
+	   ('storage_apply_3',1,1,1,1,'2017-1-1','入库申请单3',1,'mldn-sale'), 
+	   ('storage_apply_4',1,1,1,1,'2017-1-1','入库申请单4',1,'mldn-sale'), 
+	   ('storage_apply_5',1,1,1,1,'2017-1-1','入库申请单5',1,'mldn-sale'),
+	   ('storage_apply_6',1,1,1,1,'2017-1-1','入库申请单6',1,'mldn-sale'),
+	   ('storage_apply_7',1,1,1,1,'2017-1-1','入库申请单7',1,'mldn-sale'),
+	   ('storage_apply_8',1,1,1,1,'2017-1-1','入库申请单8',1,'mldn-sale'),
+	   ('storage_apply_9',1,1,1,1,'2017-1-1','入库申请单9',1,'mldn-sale'),
+	   ('storage_apply_10',1,1,1,1,'2017-1-1','入库申请单10',1,'mldn-sale');
+
+truncate table storage_apply_details;
+INSERT INTO storage_apply_details(said,gid,name,num,price,weight)
+VALUES (1,1,'商品名称-1',1,10,10),
+	   (1,2,'商品名称-2',2,10,10),
+	   (1,3,'商品名称-3',3,10,10),
+	   (1,4,'商品名称-4',4,10,10),
+	   (1,5,'商品名称-5',5,10,10),
+	   (2,6,'商品名称-6',6,10,10),
+	   (2,7,'商品名称-7',7,10,10),
+	   (2,8,'商品名称-8',8,10,10),
+	   (2,9,'商品名称-9',9,10,10),
+	   (2,10,'商品名称-10',10,10,10);
+
+truncate table goods;
+INSERT INTO goods(name,wiid,stid,price,weight,photo,note,lastin,stornum,recorder,delflag)
+VALUES ('商品名称-1',1,1,10,10,null,"photo-noto-1","2016-12-12",10,"mldn-chief",0),
+	   ('商品名称-2',1,1,10,10,null,"photo-noto-2","2016-12-12",10,"mldn-chief",0),
+	   ('商品名称-3',1,1,10,10,null,"photo-noto-3","2016-12-12",10,"mldn-chief",0),
+	   ('商品名称-4',1,1,10,10,null,"photo-noto-4","2016-12-12",10,"mldn-chief",0),
+	   ('商品名称-5',1,1,10,10,null,"photo-noto-5","2016-12-12",10,"mldn-chief",0);
+
+truncate table storage_record;
+INSERT INTO storage_record(said,gid,name,num,price,weight,note,status,indate,inmid)
+VALUES (1,1,'商品名称-1',1,10,10,'note-1',1,'2017-2-2','mldn-finance'),
+	   (1,2,'商品名称-2',2,10,10,'note-2',1,'2017-2-2','mldn-finance'),
+	   (1,3,'商品名称-3',3,10,10,'note-3',1,'2017-2-2','mldn-finance'),
+	   (1,4,'商品名称-4',4,10,10,'note-4',1,'2017-2-2','mldn-finance'),
+	   (1,5,'商品名称-5',5,10,10,'note-5',1,'2017-2-2','mldn-finance'),
+	   (2,6,'商品名称-6',6,10,10,'note-6',1,'2017-2-2','mldn-finance'),
+	   (2,7,'商品名称-7',7,10,10,'note-7',1,'2017-2-2','mldn-finance');
+
+INSERT INTO goods(said,gid,name,num,price,weight,status,indate,inmid)
+VALUES (1,1,'storage_apply_1',10,11.1,23,1,'2017-1-2','mldn-finance')
+
+调用仓储业务：
+根据wid查询仓储信息；
+根据wiid查询仓储分类信息

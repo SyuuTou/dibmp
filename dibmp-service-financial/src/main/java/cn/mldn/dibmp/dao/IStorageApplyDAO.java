@@ -15,12 +15,23 @@ public interface IStorageApplyDAO {
 	
 	public List<StorageApply> findSplit(Map<String,Object> params) ;
 	/**
+	 * 对于审核历史页面进行的分页显示方法
+	 * @param paramsToMap
+	 * @return
+	 */
+	public List<StorageApply> findSplitHistory(Map<String, Object> paramsToMap);
+	/**
 	 * 获取经过查询之后的所有的记录数
 	 * @param params 传入的封装好的map集合，key:column&&keyWord
 	 * @return 返回查询后的记录行数
 	 */
 	public Long getAllCount(Map<String,String> params);
-	
+	/**
+	 * 获取所有审核过的记录数
+	 * @param map2
+	 * @return
+	 */
+	public Long getAllHistoryCount(Map<String, String> map2);
 	/**
 	 * 根据said获取申请单的对象
 	 * @param said 申请单的id
@@ -32,7 +43,11 @@ public interface IStorageApplyDAO {
 	 * @param said 审核单编号
 	 * @return 返回进过更新之后的布尔值
 	 */
-	public boolean updateStatusTo2(Long said);
+	public boolean updateAuditStatus(Map<String,Object> map);
+
+	
+
+	
 	
 
 }

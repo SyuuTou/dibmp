@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dibmp-api" />
+        <module name="dibmp-service-financial" />
+        <module name="dibmp-service-member" />
+        <module name="dibmp-service-sale" />
+        <module name="dibmp-test-service" />
+        <module name="dibmp-util" />
+        <module name="dibmp-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dibmp" target="1.8" />
+      <module name="dibmp-api" target="1.8" />
+      <module name="dibmp-service-financial" target="1.8" />
+      <module name="dibmp-service-member" target="1.8" />
+      <module name="dibmp-service-sale" target="1.8" />
+      <module name="dibmp-test-service" target="1.8" />
+      <module name="dibmp-util" target="1.8" />
+      <module name="dibmp-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

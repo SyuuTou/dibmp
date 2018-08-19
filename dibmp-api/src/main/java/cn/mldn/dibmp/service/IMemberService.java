@@ -21,4 +21,6 @@ public interface IMemberService {
 	 * 2、key = allActions、value = 该用户具备的所有权限
 	 */
 	public Map<String,Set<String>> getRoleAndActionByMember(String mid) ;
+	
+
 }

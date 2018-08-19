@@ -6,6 +6,20 @@
 		SELECT sadid,said,gid,name,num,price,weight FROM storage_apply_details
 	</sql>
 	
+	<select id="findSplitBySaid" parameterType="Map" resultType="StorageApplyDetails">
+		<include refid="selectBase"/>
+		<where>
+			<if test="said!=null and said != &quot;&quot; ">
+				said=#{said}
+			</if>
+		</where>
+			LIMIT #{start},#{lineSize}
+	</select>
+	
+	<select id="findDetailsCount" resultType="Long">
+		SELECT count(*) FROM storage_apply_details where said=#{said}
+	</select>
+	
 	<select id="findAll" resultType="StorageApplyDetails">
 		<include refid="selectBase"/>
 	</select>

@@ -26,6 +26,24 @@ public class StorageAuditActionBack extends AbstractAction {
 	
 	private static final String TITLE = "入库审核" ;
 	
+	@ResponseBody
+	@RequestMapping("list_memberInfo")
+	public Object listMemberInfo(String mid) {
+		System.err.println("ajax传递的数值："+mid);
+		return this.financialService.getMemberInfo(mid);
+	}
+	@ResponseBody
+	@RequestMapping("list_warehouseInfo")
+	public Object listWarehouseInfo(Long wid) {
+		System.err.println("ajax传递的数值："+wid);
+		return this.financialService.getWarehouseInfo(wid);
+	}
+	@ResponseBody
+	@RequestMapping("list_storageDetailsInfo")
+	public Object listStorageDetailsModal(Long said,Long currentPage,Long lineSize) {
+		System.err.println("ajax传递的数值："+said);
+		return  this.financialService.getStorageDetailsInfo(said, currentPage, lineSize);
+	}
 	@RequestMapping("list_prepare") 
 	public ModelAndView listDetails() {
 		SplitPageUtil spu = new SplitPageUtil("申请标题:title|提交状态0/1:status", super.getPage("storage.audit.list.prepare.action")) ;
@@ -55,15 +73,20 @@ public class StorageAuditActionBack extends AbstractAction {
 	}
 	@RequestMapping("do_edit")
 	public ModelAndView doEdit(Long said,String note,Integer audit) {
-		Integer status=audit;
-		System.err.println(said+"-->"+note+"-->"+audit);
-		String mid = (String)SecurityUtils.getSubject().getSession().getAttribute("mid");
-		System.err.println(mid);
-		System.err.println(this.financialService.submitApply(said, mid, status, note));
+		Integer status;
+		if(audit==0) {
+			//审核不通过
+			status=3;
+		}else{
+			//审核通过
+			status=2;
+		}
+		//获取当前用户mid
+		String auditmid = (String)SecurityUtils.getSubject().getSession().getAttribute("mid");
 		
 		//审核成功返回true,审核失败返回false
 		ModelAndView mav=new ModelAndView(super.getPage("forward.page"));
-		if(this.financialService.submitApply(said, mid, status, note)) {
+		if(this.financialService.submitApply(said, auditmid, status, note)) {
 			super.setMsgAndUrl(mav, "storage.audit.list.history.action", "vo.add.success", TITLE);
 		}else {
 			mav.addObject("url", super.getPage("storage.audit.edit.prepare.action")+"?said="+said);
@@ -73,13 +96,13 @@ public class StorageAuditActionBack extends AbstractAction {
 	}
 	@RequestMapping("list_history") 
 	public ModelAndView listMyself() {
-		SplitPageUtil spu = new SplitPageUtil("入库单编号:said|审核状态0/1:status", super.getPage("storage.audit.list.history.action")) ;
+		SplitPageUtil spu = new SplitPageUtil("申请标题:title|审核状态2>通过/3>拒绝:status", super.getPage("storage.audit.list.history.action")) ;
 		String column = spu.getColumn();
 		String keyWord = spu.getKeyWord();
 		long currentPage = spu.getCurrentPage();
 		int lineSize = spu.getLineSize();
 		System.err.println(column+"----"+keyWord);
-		Map<String, Object> map = this.financialService.listSplitStorageRecord(column, keyWord, currentPage, lineSize);
+		Map<String, Object> map = this.financialService.listSplitStorageHistory(column, keyWord, currentPage, lineSize);
 		ModelAndView mav = new ModelAndView(super.getPage("storage.audit.list.history.page"));
 		mav.addAllObjects(map);
 		return mav;

@@ -31,5 +31,18 @@ public interface IStorageApplyDetailsDAO {
 	 */
 	public List<StorageApplyDetails> findDetailsBySaid(Long said);
 	
-//	public List<StorageApplyDetails> findSplit(Map<String,Object> params) ;
+	
+	/**
+	 * 根据申请单详情表编号来分页显示查询到所需要的信息
+	 * @param sadid 申请单详情表编号  
+	 * @return 返回StorageApplyDetails表的详细信息
+	 */
+	public List<StorageApplyDetails> findSplitBySaid(Map<String, Object> pageMap);
+	/**
+	 * 获得商品申请单对应的商品总数
+	 * @param said 传入的申请单的said
+	 * @return
+	 */
+	public Long findDetailsCount(Long said);
+	
 }

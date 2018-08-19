@@ -1,5 +1,5 @@
 var jsCommonCp = 1 ; 						// 当前所在页，默认为第1页
-var jsCommonLs = 5 ;						// 每页显示数据量
+var jsCommonLs = 3 ;						// 每页显示数据量
 var jsCommonPageSize ;						// 总页数
 function calcPageSize(allRecorders) {		// 计算总页数
     if (allRecorders == 0) {				// 没有数据量返回

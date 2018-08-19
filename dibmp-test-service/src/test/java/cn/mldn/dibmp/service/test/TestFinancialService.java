@@ -1,5 +1,7 @@
 package cn.mldn.dibmp.service.test;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -14,6 +16,7 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import cn.mldn.dbc.DatabaseConnection;
 import cn.mldn.dibmp.service.IFinancialService;
 import cn.mldn.dibmp.service.IMemberService;
 import cn.mldn.dibmp.vo.Member;
@@ -38,10 +41,24 @@ public class TestFinancialService extends TestCase {
 		List<StorageApply> allsa = this.financialService.listStorageApplysAll();
 		Iterator<StorageApply> itersa = allsa.iterator();
 		while(itersa.hasNext()) {
-			System.err.println(itersa.next());;
+			System.err.println(itersa.next());
 		}
 	}
-	
+	@Test
+	public void testSubmitApply() throws SQLException{
+		Connection conn = DatabaseConnection.getConnection();
+		System.out.println(conn);
+		conn.setAutoCommit(false);
+		
+		try {
+			this.financialService.submitApply(1L, "mldn-finance", 1, "note");
+			conn.commit(); // 进行事务提交
+		} catch (Exception e) {
+			conn.rollback(); // 进行事务提交
+		} finally {
+			conn.close(); // 不管是否出现异常都一定要关闭数据库连接
+		}
+	}
 	@Test
 	public void testListStorageRecord() {
 		List<StorageRecord> allsr = this.financialService.listStorageRecordsAll();
@@ -87,10 +104,6 @@ public class TestFinancialService extends TestCase {
 			sr.setInmid("inmid"+i);
 			System.err.println("增长成功后返回的自增长id："+this.financialService.addStorageRecord(sr));
 		}
-	}
-	@Test
-	public void testSubmitApply() {
-		
 	}
 	@Test
 	public void testListSplitStorageApply() {

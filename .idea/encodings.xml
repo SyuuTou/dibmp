@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dibmp-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dibmp-service-financial" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dibmp-service-member" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dibmp-service-sale" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dibmp-test-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dibmp-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dibmp-web" charset="UTF-8" />
+  </component>
+</project>

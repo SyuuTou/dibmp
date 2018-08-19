@@ -37,16 +37,16 @@
 						</tr>
 					</thead>
 					<tbody>
-					<c:forEach items="${StorageRecordInfos}" var="StorageRecord">
+					<c:forEach items="${StorageApplyHistorys}" var="StorageApplyHistory">
 						<tr>
-							<th class="text-center" style="width:10%;">${StorageRecord['singleStorageRecord'].said}</th> 
-							<td class="text-left"><span id="said-${StorageRecord['singleStorageRecord'].said}" style="cursor:pointer;">${StorageRecord['singleStorageApply'].title}</span></td>
-							<td class="text-left"><span id="wid-1" style="cursor:pointer;">未解决,根据入库单编号获得</span></td>
-							<td class="text-center"><fmt:formatDate value="${StorageRecord['singleStorageRecord'].indate}" pattern="yyyy-MM-dd" /></td>
-							<td class="text-center"><span id="mid-${StorageRecord['subMember'].mid}" style="cursor:pointer;">${StorageRecord['subMember'].name}</span></td>
-							<td class="text-center">${StorageRecord['allAmount']}</td>
-							<td class="text-center">${StorageRecord['totalPrice']}</td>
-							<td class="text-center"><span id="mid-${StorageRecord['checkMember'].mid}" style="cursor:pointer;">${StorageRecord['checkMember'].name}</span></td>
+							<th class="text-center" style="width:10%;">${StorageApplyHistory['singleStorageApply'].said}</th> 
+							<td class="text-left"><span id="said-${StorageApplyHistory['singleStorageApply'].said}" style="cursor:pointer;">${StorageApplyHistory['singleStorageApply'].title}</span></td>
+							<td class="text-left"><span id="wid-1" style="cursor:pointer;">也可调用仓储接口1:${StorageApplyHistory['warehouse'].name}<%-- ${StorageApplyHistory['warehouse'].name} --%></span></td>
+							<td class="text-center"><fmt:formatDate value="${StorageApplyHistory['singleStorageApply'].checkdate}" pattern="yyyy-MM-dd" /></td>
+							<td class="text-center"><span id="appmid_${StorageApplyHistory['appmember'].mid}" style="cursor:pointer;">${StorageApplyHistory['appmember'].name}</span></td>
+							<td class="text-center">${StorageApplyHistory['allAmount']}</td>
+							<td class="text-center">${StorageApplyHistory['totalPrice']}</td>
+							<td class="text-center"><span id="checkmid_${StorageApplyHistory['auditmember'].mid}" style="cursor:pointer;">${StorageApplyHistory['auditmember'].name}</span></td>
 						</tr>
 					</c:forEach>
 					</tbody>
